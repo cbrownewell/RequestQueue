@@ -1,0 +1,10 @@
+# WIP
+name: Run-Project-Tests
+
+on: [pull_request]
+
+jobs:
+  Start-Unity-Build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: Unity.exe -runTests -batchmode -projectPath C:\ -testResults C:\temp\results.xml -testPlatform PlayMode
