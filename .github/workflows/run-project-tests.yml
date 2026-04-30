@@ -1,0 +1,17 @@
+# WIP 
+name: Run-Project-Tests
+
+on: [pull_request, push]
+
+jobs:
+  Start-Unity-Build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cloning Repo
+        uses: actions/checkout@v6 # checkout project
+      #Install UnityHub https://docs.unity.com/en-us/hub/install-hub-linux
+      
+      #Install Unity https://docs.unity3d.com/6000.4/Documentation/Manual/InstallingUnity.html
+
+      #Run tests
+      - run: Unity.exe -runTests -batchmode -projectPath C:\ -testResults C:\temp\results.xml -testPlatform PlayMode # run playmode tests
